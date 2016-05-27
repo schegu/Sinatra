@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"  href="/styles.css">
+</head>
+<body>
+
+<h1>Student Information</h1>
+<h4>
+<pre>
+<%if session[:admin] == false%>
+ <a href="/login">Login</a>
+<%else%>
+ <a href="/logout">Logout</a>
+<%end%>
+</pre>
+</h4>
+
+<%=erb :nav%>
+<!--<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/students">Students</a></li>
+</ul>-->
+
+<%=yield%>
+</body>
+</html>

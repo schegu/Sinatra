@@ -1,0 +1,17 @@
+<h1><%=@stud.name unless @stud.nil?%></h1>
+<p>Student id: <%=@stud.studid unless @stud.nil?%> </p>
+<p> Category: <%=@stud.category unless @stud.nil?%> </p>
+<p> Major: <%=@stud.major unless @stud.nil?%> </p>
+<p> <a href = "/students">Back to students </a></p>
+<p> <a href = "/students/<%=@stud.id unless @stud.nil?%>/edit">Edit details</a></p>
+<form action ="/students/<%=@stud.id unless @stud.nil?%>" method="post">
+<input type ="hidden" name="_method" value="DELETE" align="center"/>
+<input type ="submit" value="delete this student" align="center"/>
+</form>
+
+
+ 
+
+
+
+
